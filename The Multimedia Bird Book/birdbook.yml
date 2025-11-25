@@ -13,7 +13,7 @@ script:
   files:
   - os_img: https://lutris.nyc3.cdn.digitaloceanspaces.com/games/Windows_95/WIN95_OSR25_DBP_2Go.7z
   - dbpu_file: https://github.com/legluondunet/mlls-tools/raw/refs/heads/master/DOSBox/dosbox-pure-unleashed.tar.xz
-  - dbpu_save: https://github.com/Doranwen/LutrisFiles/blob/main/The%20Multimedia%20Bird%20Book/The%20Multimedia%20Bird%20Book.pure.zip
+  - dbpu_save: https://github.com/Doranwen/LutrisFiles/raw/refs/heads/master/The%20Multimedia%20Bird%20Book/TheMultimediaBirdBook.pure.zip
   - game_cd: https://archive.org/download/the-multimedia-bird-book/The%20Multimedia%20Bird%20Book.iso
   game:
     args: $GAMEDIR/CD/The%20Multimedia%20Bird%20Book.iso

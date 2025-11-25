@@ -1,0 +1,38 @@
+description: Play "The Multimedia Bird Book" on Linux!
+game_slug: the-multimedia-bird-book
+gogslug: ''
+humblestoreid: ''
+installer_slug: the-multimedia-bird-book-cd-windows-95-osr-25
+name: The Multimedia Bird Book
+notes: "- Using Dosbox Pure Unleashed with a ready to use Windows 95 OSR 2.5 install\r\
+  \n- Once Windows 95 started, go to \"My Computer\", CD Drive and install the game\
+  \ using setup1.exe file, not setup.exe (do not install Quicktime provided by the\
+  \ game)\r\n- Press \"CTRL+F12\" to show Dosbox Pure Unleashed menu"
+runner: linux
+script:
+  files:
+  - os_img: https://lutris.nyc3.cdn.digitaloceanspaces.com/games/Windows_95/WIN95_OSR25_DBP_2Go.7z
+  - dbpu_file: https://github.com/legluondunet/mlls-tools/raw/refs/heads/master/DOSBox/dosbox-pure-unleashed.tar.xz
+  - dbpu_save: https://github.com/Doranwen/LutrisFiles/blob/main/The%20Multimedia%20Bird%20Book/The%20Multimedia%20Bird%20Book.pure.zip
+  - game_cd: https://archive.org/download/the-multimedia-bird-book/The%20Multimedia%20Bird%20Book.iso
+  game:
+    args: $GAMEDIR/CD/The%20Multimedia%20Bird%20Book.iso
+    exe: $GAMEDIR/DOSBoxPure_x86_64
+    working_dir: $GAMEDIR
+  installer:
+  - extract:
+      dst: $GAMEDIR
+      file: dbpu_file
+  - extract:
+      dst: $GAMEDIR/system
+      src: os_img
+  - merge:
+      dst: $GAMEDIR/saves
+      src: dbpu_save
+  - merge:
+      dst: $GAMEDIR/CD
+      src: game_cd
+slug: the-multimedia-bird-book-cd-windows-95-osr-25
+steamid: null
+version: CD + Windows 95 OSR 2.5
+year: 1995

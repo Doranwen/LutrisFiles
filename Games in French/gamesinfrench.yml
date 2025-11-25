@@ -6,14 +6,16 @@ installer_slug: games-in-french-cd-windows-95
 name: Games in French
 notes: "- Using Dosbox Pure Unleashed with a ready to use Windows 95 OSR 2.5 install\r\
   \n- Once Windows 95 started, go to \"My Computer\", CD Drive and install the game.\r\
-  \n- Answer \"Ignore\" when the installer says it cannot find the DOSHLP.HLP file.\r\
+  \n- Answer \"Ignore\" when the installer says it cannot find the DOSHELP.HLP file.\r\
   \n- Press \"CTRL+F12\" to show Dosbox Pure Unleashed menu"
 runner: linux
 script:
   files:
   - os_img: https://lutris.nyc3.cdn.digitaloceanspaces.com/games/Windows_95/WIN95_OSR25_DBP_2Go.7z
   - dbpu_file: https://github.com/legluondunet/mlls-tools/raw/refs/heads/master/DOSBox/dosbox-pure-unleashed.tar.xz
-  - dbpu_save: https://github.com/Doranwen/LutrisFiles/raw/refs/heads/main/Games%20in%20French/GamesinFrench.pure.zip
+  - dbpu_save:
+      filename: Games in French.pure.zip
+      url: https://github.com/legluondunet/MyLittleLutrisScripts/raw/refs/heads/master/Windows%2095/DOSBox-pure.pure.zip
   - game_cd: https://archive.org/download/GamesinFrench/Games%20in%20French.iso
   game:
     args: $GAMEDIR/CD/Games%20in%20French.iso

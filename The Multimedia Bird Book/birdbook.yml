@@ -16,9 +16,11 @@ script:
   - dbpu_save:
       filename: The Multimedia Bird Book.pure.zip
       url: https://github.com/legluondunet/MyLittleLutrisScripts/raw/refs/heads/master/Windows%2095/DOSBox-pure.pure.zip
-  - game_cd: https://archive.org/download/the-multimedia-bird-book/The%20Multimedia%20Bird%20Book.iso
+- game_cd:
+    filename: The Multimedia Bird Book.iso
+    url: https://archive.org/download/the-multimedia-bird-book/The%20Multimedia%20Bird%20Book.iso
   game:
-    args: $GAMEDIR/CD/The%20Multimedia%20Bird%20Book.iso
+    args: '"$GAMEDIR/CD/The Multimedia Bird Book.iso"'
     exe: $GAMEDIR/DOSBoxPure_x86_64
     working_dir: $GAMEDIR
   installer:

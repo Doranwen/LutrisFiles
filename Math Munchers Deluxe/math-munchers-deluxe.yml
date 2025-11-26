@@ -5,7 +5,7 @@ humblestoreid: ''
 installer_slug: math-munchers-deluxe-cd-windows-95
 name: Math Munchers Deluxe
 notes: "- Using Dosbox Pure Unleashed with a ready to use Windows 95 OSR 2.5 install\r\
-  \n- Once Windows 95 has started, go to \"My Computer\", find drive E: and install the game and QuickTime as prompted.\r\
+  \n- Once Windows 95 has started, go to \"My Computer\", find drive E: and install the game by clicking on \"Setup\" in the menu.\r\
   \n- Press \"CTRL+F12\" to show Dosbox Pure Unleashed menu."
 runner: linux
 script:

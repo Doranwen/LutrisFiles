@@ -1,0 +1,42 @@
+description: ''
+game_slug: spell-it-deluxe
+gogslug: ''
+humblestoreid: ''
+installer_slug: spell-it-deluxe-cd-windows-95
+name: Spell It Deluxe
+notes: "- Using Dosbox Pure Unleashed with a ready to use Windows 95 OSR 2.5 install\r\
+  \n- Once Windows 95 has started, go to \"My Computer\", find drive E: and install the game.\r\
+  \n- Click on the monitor in the lower right corner to switch to 256 colors before running the game.\r\
+  \n- Press \"CTRL+F12\" to show Dosbox Pure Unleashed menu."
+runner: linux
+script:
+  files:
+  - os_img: https://lutris.nyc3.cdn.digitaloceanspaces.com/games/Windows_95/WIN95_OSR25_DBP_2Go.7z
+  - dbpu_file: https://github.com/legluondunet/mlls-tools/raw/refs/heads/master/DOSBox/dosbox-pure-unleashed.tar.xz
+  - dbpu_save:
+      filename: Spell It Deluxe.pure.zip
+      url: https://github.com/legluondunet/MyLittleLutrisScripts/raw/refs/heads/master/Windows%2095/DOSBox-pure.pure.zip
+  - game_cd: 
+      filename: Spell It Deluxe.iso
+      url: https://archive.org/download/SpellItDeluxeDavidsonAssociates1996/SPELLIT.iso
+  game:
+    args: '"$GAMEDIR/CD/Spell It Deluxe.iso"'
+    exe: $GAMEDIR/DOSBoxPure_x86_64
+    working_dir: $GAMEDIR
+  installer:
+  - extract:
+      dst: $GAMEDIR
+      file: dbpu_file
+  - extract:
+      dst: $GAMEDIR/system
+      src: os_img
+  - merge:
+      dst: $GAMEDIR/saves
+      src: dbpu_save
+  - merge:
+      dst: $GAMEDIR/CD
+      src: game_cd
+slug: spell-it-deluxe-cd-windows-95
+steamid: null
+version: CD + Windows 95
+year: 1995

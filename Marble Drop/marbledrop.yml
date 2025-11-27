@@ -1,0 +1,41 @@
+description: ''
+game_slug: marble-drop
+gogslug: ''
+humblestoreid: ''
+installer_slug: marble-drop-cd-windows-95
+name: Marble Drop
+notes: "- Using Dosbox Pure Unleashed with a ready to use Windows 95 OSR 2.5 install\r\
+  \n- Once Windows 95 has started, go to \"My Computer\", find drive E: and install the game.\r\
+  \n- Press \"CTRL+F12\" to show Dosbox Pure Unleashed menu."
+runner: linux
+script:
+  files:
+  - os_img: https://lutris.nyc3.cdn.digitaloceanspaces.com/games/Windows_95/WIN95_OSR25_DBP_2Go.7z
+  - dbpu_file: https://github.com/legluondunet/mlls-tools/raw/refs/heads/master/DOSBox/dosbox-pure-unleashed.tar.xz
+  - dbpu_save:
+      filename: Marble Drop.pure.zip
+      url: https://github.com/legluondunet/MyLittleLutrisScripts/raw/refs/heads/master/Windows%2095/DOSBox-pure.pure.zip
+  - game_cd: 
+      filename: Marble Drop.iso
+      url: https://archive.org/download/marble-drop/Marble%20Drop%20%281997%29%28Maxis%29.iso
+  game:
+    args: '"$GAMEDIR/CD/Marble Drop.iso"'
+    exe: $GAMEDIR/DOSBoxPure_x86_64
+    working_dir: $GAMEDIR
+  installer:
+  - extract:
+      dst: $GAMEDIR
+      file: dbpu_file
+  - extract:
+      dst: $GAMEDIR/system
+      src: os_img
+  - merge:
+      dst: $GAMEDIR/saves
+      src: dbpu_save
+  - merge:
+      dst: $GAMEDIR/CD
+      src: game_cd
+slug: marble-drop-cd-windows-95
+steamid: null
+version: CD + Windows 95
+year: 1995

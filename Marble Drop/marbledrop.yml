@@ -5,7 +5,8 @@ humblestoreid: ''
 installer_slug: marble-drop-cd-windows-95
 name: Marble Drop
 notes: "- Using Dosbox Pure Unleashed with a ready to use Windows 95 OSR 2.5 install\r\
-  \n- Once Windows 95 has started, go to \"My Computer\", find drive E: and install the game.\r\
+  \n- Once Windows 95 has started, go to \"My Computer\", RIGHT-click on drive E: and choose \"Explore\".\r\
+  \n- Do NOT double-click on the drive letter!  Install the game using setup.exe.  Install the pinball games from the FullTilt folder.\r\
   \n- Press \"CTRL+F12\" to show Dosbox Pure Unleashed menu."
 runner: linux
 script:
@@ -38,4 +39,4 @@ script:
 slug: marble-drop-cd-windows-95
 steamid: null
 version: CD + Windows 95
-year: 1995
+year: 1997

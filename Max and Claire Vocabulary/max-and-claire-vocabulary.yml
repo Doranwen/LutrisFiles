@@ -1,0 +1,30 @@
+description: ''
+game_slug: max-and-claire-vocabulary
+gogslug: ''
+humblestoreid: ''
+installer_slug: max-and-claire-vocabulary-wine
+name: 'Max and Claire: Vocabulary'
+notes: "- Get the iso for the game here: https://www.myabandonware.com/game/junior-brain-train-word-games-ydy' \r\
+  \n Install both the game and Quicktime, then close Quicktime in the system try so the installation will complete.\r\
+  \n Switch wine version to system instead of wine-ge and configure it with a virtual desktop of at least 800x600."
+runner: wine
+script:
+  files:
+  - installer: N/A:Select the \"setup.exe\" file on the CD.
+  game:
+    arch: win32
+    exe: $GAMEDIR/drive_c/Program Files/Happyneuron/Max_and_Claire_UK/Happyneuron/Happyneuron.exe
+    prefix: $GAMEDIR
+  installer:
+  - task:
+      arch: win32
+      name: create_prefix
+      prefix: $GAMEDIR
+  - task:
+      executable: installer
+      name: wineexec
+      prefix: $GAMEDIR
+slug: max-and-claire-vocabulary-wine
+steamid: null
+version: Wine
+year: 1995

@@ -1,0 +1,22 @@
+description: ''
+game_slug: discovery-spelling
+gogslug: ''
+humblestoreid: ''
+installer_slug: discovery-spelling-amiga
+name: Discovery
+notes: ''
+runner: libretro
+script:
+  files:
+  - floppy: https://archive.org/download/Edu_OtherRoms/Educational/discovery4.adf
+  game:
+    core: puae2021
+    main_file: floppy
+  installer:
+  - merge:
+      src: floppy
+      dst: $GAMEDIR
+slug: discovery-spelling-amiga
+steamid: null
+version: Amiga
+year: 1986

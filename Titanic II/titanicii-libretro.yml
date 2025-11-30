@@ -1,0 +1,36 @@
+description: ''
+game_slug: titanic-ii
+gogslug: ''
+humblestoreid: ''
+installer_slug: titanic-ii-amiga
+name: Titanic II
+notes: 'Before playing, rename game disks to match names in m3u.  Make sure the m3u has (A1200) in the name.'
+runner: libretro
+script:
+  files:
+  - floppy1: 
+      filename: titanicii1(A1200).adf
+      url: https://archive.org/download/Edu_OtherRoms/Educational/titanicii1%28A1200%29.adf
+  - floppy2: 
+      filename: titanicii2(A1200).adf
+      url: https://archive.org/download/Edu_OtherRoms/Educational/titanicii2%28A1200%29.adf
+  - playlist: 
+      filename: titanicii(A1200).m3u
+      url: https://github.com/Doranwen/LutrisFiles/raw/refs/heads/main/Titanic%20II/titanicii(A1200).m3u
+  game:
+    core: puae2021
+    main_file: playlist
+  installer:
+  - merge:
+      dst: $GAMEDIR
+      src: floppy1
+  - merge:
+      dst: $GAMEDIR
+      src: floppy2
+  - merge:
+      dst: $GAMEDIR
+      src: playlist
+slug: titanic-ii-amiga
+steamid: null
+version: Amiga
+year: 1995

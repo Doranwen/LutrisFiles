@@ -1,0 +1,23 @@
+description: ''
+game_slug: tecomputer-scrabble-de-luxest
+gogslug: ''
+humblestoreid: ''
+installer_slug: computer-scrabble-de-luxe-amiga
+name: Computer Scrabble Deluxe
+notes: ''
+runner: fsuae
+script:
+  files:
+  - floppy: https://archive.org/download/Edu_OtherRoms/Educational/scrabbledeluxe.adf
+  game:
+    device: flop1
+    machine: amiga
+    main_file: floppy
+  installer:
+  - merge:
+      dst: $GAMEDIR
+      src: floppy
+slug: computer-scrabble-de-luxe-amiga
+steamid: null
+version: Amiga
+year: 1987

@@ -5,13 +5,12 @@ humblestoreid: ''
 installer_slug: computer-scrabble-de-luxe-amiga
 name: Computer Scrabble Deluxe
 notes: ''
-runner: fsuae
+runner: libretro
 script:
   files:
   - floppy: https://archive.org/download/Edu_OtherRoms/Educational/scrabbledeluxe.adf
   game:
-    device: flop1
-    machine: amiga
+    core: puae2021
     main_file: floppy
   installer:
   - merge:

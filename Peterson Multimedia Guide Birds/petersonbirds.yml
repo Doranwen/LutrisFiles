@@ -1,8 +1,8 @@
 description: ''
-game_slug: peterson-multimedia-guide-birds
+game_slug: north-american-birds-peterson-multimedia-guide
 gogslug: ''
 humblestoreid: ''
-installer_slug: peterson-multimedia-guide-birds-cd-windows-95
+installer_slug: north-american-birds-peterson-multimedia-guide-cd-windows-95
 name: 'North American Birds: A Peterson Multimedia Guide'
 notes: "- Using Dosbox Pure Unleashed with a ready to use Windows 95 OSR 2.5 install\r\
   \n- Once Windows 95 has started, go to \"My Computer\", find drive E: and install the game.\r\
@@ -35,7 +35,7 @@ script:
   - merge:
       dst: $GAMEDIR/CD
       src: game_cd
-slug: peterson-multimedia-guide-birds-cd-windows-95
+slug: north-american-birds-peterson-multimedia-guide-cd-windows-95
 steamid: null
 version: CD + Windows 95
 year: 2000

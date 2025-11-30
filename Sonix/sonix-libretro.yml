@@ -1,0 +1,34 @@
+description: ''
+game_slug: 'sonix'
+gogslug: ''
+humblestoreid: ''
+installer_slug: ''
+name: Sonix
+notes: ''
+runner: libretro
+script:
+  files:
+  - floppy1: https://archive.org/download/Edu_OtherRoms/Other/wb1.adf
+  - floppy2: https://archive.org/download/Edu_OtherRoms/Other/wb2.adf
+  - floppy3: https://archive.org/download/Edu_OtherRoms/Other/sonix1.adf
+  - playlist: https://github.com/Doranwen/LutrisFiles/raw/refs/heads/main/Sonix/sonix.m3u
+  game:
+    core: puae2021
+    main_file: playlist
+  installer:
+  - merge:
+      dst: $GAMEDIR
+      src: floppy1
+  - merge:
+      dst: $GAMEDIR
+      src: floppy2
+  - merge:
+      dst: $GAMEDIR
+      src: floppy3
+  - merge:
+      dst: $GAMEDIR
+      src: playlist
+slug: ''
+steamid: null
+version: Amiga
+year: 1987

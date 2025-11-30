@@ -1,0 +1,32 @@
+description: ''
+game_slug: where-in-the-usa-is-carmen-sandiego
+gogslug: ''
+humblestoreid: ''
+installer_slug: where-in-the-usa-is-carmen-sandiego-amiga
+name: Where in the U.S.A. is Carmen Sandiego?
+notes: ''
+runner: libretro
+script:
+  files:
+  - floppy1: https://archive.org/download/Edu_OtherRoms/Educational/carmenusa1.adf
+  - floppy2: https://archive.org/download/Edu_OtherRoms/Educational/carmenusa2.adf
+  - playlist: 
+      filename: Where in the USA is Carmen Sandiego.m3u
+      url: https://github.com/Doranwen/LutrisFiles/raw/refs/heads/main/Where%20in%20the%20USA%20is%20Carmen%20Sandiego/carmenusa.m3u
+  game:
+    core: puae2021
+    main_file: playlist
+  installer:
+  - merge:
+      dst: $GAMEDIR
+      src: floppy1
+  - merge:
+      dst: $GAMEDIR
+      src: floppy2
+  - merge:
+      dst: $GAMEDIR
+      src: playlist
+slug: where-in-the-usa-is-carmen-sandiego-amiga
+steamid: null
+version: Amiga
+year: 1986

@@ -1,0 +1,22 @@
+description: ''
+game_slug: bush-buck
+gogslug: ''
+humblestoreid: ''
+installer_slug: bush-buck-amiga
+name: 'Bush Buck: A Treasure Hunt'
+notes: ''
+runner: libretro
+script:
+  files:
+  - floppy: https://archive.org/download/Edu_OtherRoms/Educational/bbtreashunt.adf
+  game:
+    core: puae2021
+    main_file: floppy
+  installer:
+  - merge:
+      src: floppy
+      dst: $GAMEDIR
+slug: bush-buck-amiga
+steamid: null
+version: Amiga
+year: 1991

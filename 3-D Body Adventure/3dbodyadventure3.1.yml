@@ -1,0 +1,32 @@
+description: ''
+game_slug: 3d-body-adventure
+gogslug: ''
+humblestoreid: ''
+installer_slug: 3d-body-adventure-cd-windows-3.1
+name: 3D Body Adventure
+notes: "- Using Dosbox Staging with a ready to use Windows 3.1 install\r\
+  \n- Once Windows 3.1 has started, in \"Main\" group click on \"File Manager\", click on \"D\" drive,\
+  \ and run setup.  Allow the game to restart Windows and do graphics initialization before playing."
+runner: dosbox
+script:
+  files:
+  - os_arch: https://github.com/Doranwen/LutrisFiles/raw/refs/heads/main/Windows_3.1_256.7z
+  - game_cd: 
+      filename: 3DBODY.iso
+      url: https://archive.org/download/3d-body-adventure_202311/3D%20Body%20Adventure.iso
+  game:
+    main_file: $GAMEDIR/dosbox.conf
+  installer:
+  - extract:
+      dst: $GAMEDIR
+      file: os_arch
+  - merge:
+      dst: $GAMEDIR/CD
+      src: game_cd
+  - execute:
+      command: cd "$GAMEDIR" ; sed -i '237i imgmount d "CD/3DBODY.iso" -t iso' dosbox.conf
+        ;
+slug: 3d-body-adventure-cd-windows-3.1
+steamid: null
+version: CD + Windows 3.1
+year: 1994

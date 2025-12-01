@@ -5,7 +5,7 @@ humblestoreid: ''
 installer_slug: simpark-cd-windows-95
 name: SimPark
 notes: "- Using Dosbox Pure Unleashed with a ready to use Windows 95 OSR 2.5 install\r\
-  \n- Once Windows 95 has started, go to \"My Computer\", find drive E: and install the game and DirectX.\r\
+  \n- Once Windows 95 has started, go to \"My Computer\", find drive E: and install the game and any other programs it recommends.\r\
   \n- Press \"CTRL+F12\" to show Dosbox Pure Unleashed menu."
 runner: linux
 script:

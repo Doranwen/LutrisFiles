@@ -1,0 +1,25 @@
+description: ''
+game_slug: math-munchers-deluxe
+gogslug: ''
+humblestoreid: ''
+installer_slug: math-munchers-deluxe-wine
+name: Math Munchers Deluxe
+notes: "- This installer extracts the game files from the CD iso and runs the game without proper installation."
+runner: wine
+script:
+  files:
+  - game_cd: 
+      filename: Math Munchers Deluxe.iso
+      url: https://archive.org/download/munchers_202307/MUNCHERS.iso
+  game:
+    arch: win32
+    exe: $GAMEDIR/muncher.exe
+    working_dir: $GAMEDIR
+  installer:
+  - extract:
+      dst: $GAMEDIR
+      file: game_cd
+slug: math-munchers-deluxe-wine
+steamid: null
+version: wine
+year: 1995

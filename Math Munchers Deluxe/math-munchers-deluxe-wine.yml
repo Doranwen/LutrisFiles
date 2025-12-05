@@ -4,7 +4,7 @@ gogslug: ''
 humblestoreid: ''
 installer_slug: math-munchers-deluxe-wine
 name: Math Munchers Deluxe
-notes: "- This installer extracts the game files from the CD iso and runs the game without proper installation."
+notes: "- This installer extracts the game files from the CD iso and runs the game without a standard installation."
 runner: wine
 script:
   files:

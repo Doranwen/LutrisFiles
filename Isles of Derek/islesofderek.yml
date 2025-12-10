@@ -1,0 +1,41 @@
+description: ''
+game_slug: isles-of-derek
+gogslug: ''
+humblestoreid: ''
+installer_slug: isles-of-derek-cd-windows-98
+name: Isles of Derek
+notes: "- Using Dosbox Pure Unleashed with a ready to use Windows 98 SE install\r\
+  \n- Once Windows 98 has started, go to \"My Computer\", find drive E: and install the game.\r\
+  \n- Press \"CTRL+F12\" to show Dosbox Pure Unleashed menu."
+runner: linux
+script:
+  files:
+  - os_img: https://lutris.nyc3.cdn.digitaloceanspaces.com/games/Windows_98/W98_SE_DBP_2Go.7z
+  - dbpu_file: https://github.com/legluondunet/mlls-tools/raw/refs/heads/master/DOSBox/dosbox-pure-unleashed.tar.xz
+  - dbpu_save:
+      filename: Isles of Derek.pure.zip
+      url: https://github.com/legluondunet/MyLittleLutrisScripts/raw/refs/heads/master/Windows%2098/DOSBox-pure.pure.zip
+  - game_cd: 
+      filename: Isles of Derek.iso
+      url: https://archive.org/download/Nacah_Derek/Isles%20Of%20Derek/Isles_of_Derek.iso
+  game:
+    args: '"$GAMEDIR/CD/Isles of Derek.iso"'
+    exe: $GAMEDIR/DOSBoxPure_x86_64
+    working_dir: $GAMEDIR
+  installer:
+  - extract:
+      dst: $GAMEDIR
+      file: dbpu_file
+  - extract:
+      dst: $GAMEDIR/system
+      src: os_img
+  - merge:
+      dst: $GAMEDIR/saves
+      src: dbpu_save
+  - merge:
+      dst: $GAMEDIR/CD
+      src: game_cd
+slug: isles-of-derek-cd-windows-98
+steamid: null
+version: CD + Windows 98
+year: 2005

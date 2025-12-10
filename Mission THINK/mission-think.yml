@@ -5,7 +5,7 @@ humblestoreid: ''
 installer_slug: super-solvers-mission-think-cd-windows-95
 name: 'Super Solvers Mission: T.H.I.N.K.'
 notes: "- Using Dosbox Pure Unleashed with a ready to use Windows 95 OSR 2.5 install\r\
-  \n- Once Windows 95 has started, go to \"My Computer\", find drive E: and install the game and any additional programs.\r\
+  \n- Once Windows 95 has started, go to \"My Computer\", find drive E: and install the game and any additional recommended programs.\r\
   \n- Press \"CTRL+F12\" to show Dosbox Pure Unleashed menu."
 runner: linux
 script:

@@ -1,0 +1,25 @@
+description: ''
+game_slug: word-munchers-deluxe
+gogslug: ''
+humblestoreid: ''
+installer_slug: word-munchers-deluxe-wine
+name: Word Munchers Deluxe
+notes: "- This installer extracts the game files from the CD iso and runs the game without a standard installation."
+runner: wine
+script:
+  files:
+  - game_cd: 
+      filename: Word Munchers Deluxe.iso
+      url: https://archive.org/download/WMUNCHER/WMUNCHER.iso
+  game:
+    arch: win32
+    exe: $GAMEDIR/WMUNCHER.EXE
+    working_dir: $GAMEDIR
+  installer:
+  - extract:
+      dst: $GAMEDIR
+      file: game_cd
+slug: word-munchers-deluxe-wine
+steamid: null
+version: wine
+year: 1996

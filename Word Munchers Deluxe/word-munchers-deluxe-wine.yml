@@ -14,11 +14,15 @@ script:
   game:
     arch: win32
     exe: $GAMEDIR/WMUNCHER.EXE
-    working_dir: $GAMEDIR
+    prefix: $GAMEDIR
   installer:
+  - task:
+      name: create_prefix
+      prefix: $GAMEDIR
   - extract:
       dst: $GAMEDIR
       file: game_cd
+      format: iso
 slug: word-munchers-deluxe-wine
 steamid: null
 version: wine

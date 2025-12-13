@@ -1,0 +1,26 @@
+description: null
+game_slug: ecoquest-the-search-for-cetus
+gogslug: ''
+humblestoreid: ''
+installer_slug: ecoquest-the-search-for-cetus-cddos
+name: 'EcoQuest: The Search for Cetus'
+notes: ''
+runner: scummvm
+script:
+  files:
+  - archive: https://archive.org/download/ecoquest-1-cd/EcoQuest%201%20-%20The%20Search%20for%20Cetus%20%281992%29%28Sierra%29.iso
+  game:
+    game_id: ecoquest
+    path: $GAMEDIR
+    subtitles: true
+  installer:
+  - extract:
+      file: archive
+  scummvm:
+    aspect: true
+    gfx-mode: 3x
+    windowed: true
+slug: ecoquest-the-search-for-cetus-cddos
+steamid: null
+version: CD/DOS
+year: 1991

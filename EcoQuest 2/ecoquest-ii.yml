@@ -1,0 +1,26 @@
+description: null
+game_slug: ecoquest-ii-lost-secret-of-the-rainforest
+gogslug: ''
+humblestoreid: ''
+installer_slug: ecoquest-ii-lost-secret-of-the-rainforest-dos
+name: 'EcoQuest II: Lost Secret of the Rainforest'
+notes: 'Before launching, move the contents of the EcoQuest 2 - Lost Secret of the Rainforest subfolder into the main game folder.'
+runner: scummvm
+script:
+  files:
+  - archive: https://archive.org/download/ecoquest-2/Ecoquest2.zip
+  game:
+    game_id: ecoquest2
+    path: $GAMEDIR
+    subtitles: true
+  installer:
+  - extract:
+      file: archive
+  scummvm:
+    aspect: true
+    gfx-mode: 3x
+    windowed: true
+slug: ecoquest-ii-lost-secret-of-the-rainforest-dos
+steamid: null
+version: DOS
+year: 1993

@@ -1,0 +1,30 @@
+description: ''
+game_slug: games-in-japanese
+gogslug: ''
+humblestoreid: ''
+installer_slug: games-in-japanese-vis-windows-3.1
+name: Games in Japanese
+notes: "- Using Dosbox-Staging with a ready to use Windows 3.1 install with VIS DLLs and font merged in\r\
+  \n- Once Windows 3.1 has started, in \"Main\" group click on \"File Manager\", click on \"D\" drive,\
+  \ go into the JAPANESE folder, and run \"pr.exe\"."
+runner: dosbox
+script:
+  files:
+  - os_arch: https://github.com/Doranwen/LutrisFiles/raw/refs/heads/main/Windows_3.1_VIS.7z
+  - game_cd: https://archive.org/download/japanese_202306/JAPANESE.iso
+  game:
+    main_file: $GAMEDIR/dosbox.conf
+  installer:
+  - extract:
+      dst: $GAMEDIR
+      file: os_arch
+  - merge:
+      dst: $GAMEDIR/CD
+      src: game_cd
+  - execute:
+      command: cd "$GAMEDIR" ; sed -i '237i imgmount d "CD/JAPANESE.iso" -t iso' dosbox.conf
+        ;
+slug: games-in-japanese-vis-windows-3.1
+steamid: null
+version: VIS iso + modified Windows 3.1
+year: 1992

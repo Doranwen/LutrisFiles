@@ -5,7 +5,7 @@ humblestoreid: ''
 installer_slug: the-cluefinders-6th-grade-adventures-the-empire-of-the-plant-people-cd-windows-95
 name: Cluefinders 6th Grade Adventures
 notes: "- Using Dosbox Pure Unleashed with a ready to use Windows 95 OSR 2.5 install\r\
-  \n- Once Windows 95 has started, go to \"My Computer\", find drive E: and install the game and Adobe Acrobat Reader.\r\
+  \n- Once Windows 95 has started, go to \"My Computer\", find drive E: and install the game and suggested drivers.\r\
   \n- Press \"CTRL+F12\" to show Dosbox Pure Unleashed menu."
 runner: linux
 script:

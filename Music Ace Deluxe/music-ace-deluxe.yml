@@ -1,0 +1,42 @@
+description: ''
+game_slug: music-ace-deluxe
+gogslug: ''
+humblestoreid: ''
+installer_slug: music-ace-deluxe-cd-windows-98
+name: Music Ace Deluxe
+notes: "- Using Dosbox Pure Unleashed with a ready to use Windows 98 SE install\r\
+  \n- Once Windows 98 has started, go to \"My Computer\", find drive E: and install the game and recommended files.\r\
+  \n- Use the following code to register the game: 8C 1 WRX FBN GTF 010\r\
+  \n- Press \"CTRL+F12\" to show Dosbox Pure Unleashed menu."
+runner: linux
+script:
+  files:
+  - os_img: https://lutris.nyc3.cdn.digitaloceanspaces.com/games/Windows_98/W98_SE_DBP_2Go.7z
+  - dbpu_file: https://github.com/legluondunet/mlls-tools/raw/refs/heads/master/DOSBox/dosbox-pure-unleashed.tar.xz
+  - dbpu_save:
+      filename: Music Ace Deluxe.pure.zip
+      url: https://github.com/legluondunet/MyLittleLutrisScripts/raw/refs/heads/master/Windows%2098/DOSBox-pure.pure.zip
+  - game_cd: 
+      filename: Music Ace Deluxe.iso
+      url: https://archive.org/download/music-ace-deluxe/Music%20Ace%20Deluxe.iso
+  game:
+    args: '"$GAMEDIR/CD/Music Ace Deluxe.iso"'
+    exe: $GAMEDIR/DOSBoxPure_x86_64
+    working_dir: $GAMEDIR
+  installer:
+  - extract:
+      dst: $GAMEDIR
+      file: dbpu_file
+  - extract:
+      dst: $GAMEDIR/system
+      src: os_img
+  - merge:
+      dst: $GAMEDIR/saves
+      src: dbpu_save
+  - merge:
+      dst: $GAMEDIR/CD
+      src: game_cd
+slug: music-ace-deluxe-cd-windows-98
+steamid: null
+version: CD + Windows 98
+year: 2004

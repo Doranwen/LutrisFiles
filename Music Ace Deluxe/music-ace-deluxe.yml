@@ -5,7 +5,7 @@ humblestoreid: ''
 installer_slug: music-ace-deluxe-cd-windows-98
 name: Music Ace Deluxe
 notes: "- Using Dosbox Pure Unleashed with a ready to use Windows 98 SE install\r\
-  \n- Once Windows 98 has started, go to \"My Computer\", find drive E: and install the game and recommended files.\r\
+  \n- Once Windows 98 has started, go to \"My Computer\", find drive E: and install the game and all recommended files and software.\r\
   \n- Use the following code to register the game: 8C 1 WRX FBN GTF 010\r\
   \n- Press \"CTRL+F12\" to show Dosbox Pure Unleashed menu."
 runner: linux
